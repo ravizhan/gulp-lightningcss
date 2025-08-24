@@ -10,7 +10,7 @@ const applySourceMap = require("vinyl-sourcemaps-apply");
 module.exports = function ({
   minify = true,
   sourceMap = true,
-  targets = lightningcss.browserslistToTargets(browserslist()),
+  targets = lightningcss.browserslistToTargets(browserslist(">0.3%")),
   ...options
 } = {}) {
   const stream = new Transform({ objectMode: true });
